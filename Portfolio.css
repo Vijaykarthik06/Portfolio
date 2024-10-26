@@ -1,0 +1,647 @@
+*{
+    font-family: "Poppins" , sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+:root{
+    --text-color: white;
+    --bg-color: #080808;
+}
+html{
+    font-size: 60%; 
+    overflow-x: hidden; /*The elements overflow in X axis will not be visible*/
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+    color: white;
+
+}
+.header{
+    background-color: black;
+    display: flex;/*Arrange in one by one order */
+    position: fixed;/*Used to fix the position*/
+    width: 100%;
+    padding: 4rem 12% 4rem;   /*Top Right&Left Bottom*/
+    top: 0;
+    margin: 0;
+        /*Move the item to center of the page i.e Center of the Column*/
+    justify-content: space-between;   /*Move the item to the center of the row*/
+    z-index: 5;
+}
+.photo{
+    
+    background-position: left;
+    width: 150px;
+    height: 200px;
+}
+.name{
+    font-size: 3rem;    /*Rem=16px */
+    color: var(--text-color);
+    font-weight: 800;
+    transition-duration: .5s; /*Time taken to do the action*/
+    animation-name: name1;
+    animation-duration: 2s;
+}
+.name:hover{  /*It helps in the animation*/
+    transform: scale(1.2); /*To Zoom In the Content*/
+}
+.name span{
+    color: aqua;
+   /* color: rgb(0, 201, 255); */
+}
+@keyframes name1 {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.navlist{
+    animation-name: header1;
+    animation-duration: 2s;
+    position: relative;
+}
+.navlist a{
+    position: relative; /*It only moves the specific content*/
+    justify-content: space-between;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 4rem;
+    transition-duration: .5s;
+}
+.navlist a:hover{
+    color: aqua;
+    border-bottom: 3px solid aqua;
+    transform: translateX(-6px) scale(1.09);
+    animation-name: navlisthover;
+    animation-duration: 2s;
+}
+@keyframes navlisthover {
+    0%{
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+} 
+@keyframes header1 {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+section{
+    padding: 0 12% 0;
+    min-height: 100vh;
+}
+.Intro{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+   /* background: url(../Web/img5.jpg);
+    background-size: cover;  */
+}
+@keyframes Intro1 {
+    0%{
+        transform: translateY(-70px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.Introtext h1{
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase; /*To Capitalize all Letter*/
+    letter-spacing: 2px;
+    margin: 20px 0;
+    animation-name: Intro2;
+    animation-duration: 2s;
+}
+.Introtext h1 span{
+    color: aqua;
+}
+@keyframes Intro2 {
+    0%{
+        transform: translateX(80px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.Introtext h6{
+    font-size: 20px;
+    font-weight: 700;
+    animation-name: Intro1;
+    animation-duration: 3s;
+}
+.Introtext h6 span{
+    color: aqua;
+}
+.desig{
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0 10px;
+    animation-name: Intro1;
+    animation-duration: 3s;
+}
+.desig span{
+    color: aqua;
+}
+.Introtext p{
+    font-size: 15px;
+    color: grey;
+    animation-name: Intro1;
+    animation-duration: 3s;
+}
+.pg1icons i{
+    display: inline-flex;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 0 5px 0;
+    color: aqua;
+    width: 4rem;
+    height: 4rem;
+    margin: 3rem 1rem 3rem 0;
+    transition: all .5s ease;
+    animation-name: Intro1;
+    animation-duration: 2s;
+}
+.pg1icons i:hover{
+   /* transform: rotate3d(0, 0, 1, 360deg);*/
+    color: var(--text-color);
+    transform: scale(1.3)translateY(-5px);
+}
+.Education{
+    position: relative;
+    padding: 8rem 5% 2rem;
+    transition: all 1s ease;
+    animation-name: Educationpage;
+    animation-duration: 2s;
+    height: 100%;
+}
+.Education h2{
+    justify-content: center;
+    font-size: 60px;
+    text-align: center;
+    animation-name: Educationtop;
+    animation-duration: 2s;
+    margin-top: 3rem;
+}
+@keyframes Educationtop {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.education1{
+    display: inline-flex;
+    padding: 4rem 2% 2rem;
+}
+.pgi2{
+    display: inline-flex;
+}
+.fa-calendar-days{
+    font-size: 25px;
+    padding: 1rem 8% 2rem;
+    color: aqua;
+}
+.pgi2 h1{
+    font-size: 20px;
+    margin-top: 8px;
+    padding: 5%;
+}
+.y2020{
+    height: 200px;
+    width: 50%;
+    position: relative;
+    border: 3px solid aqua;
+    padding: 1rem 4% 2rem;
+    border-radius: 5rem;
+    transition: all .5s ease;
+    animation-name: slideleft;
+    animation-duration: 2s;
+}
+.y2020:hover{
+    border-color: aqua;
+    transform: translateY(-10px) scale(1.09);
+    box-shadow: 0 0 40px aqua; /*To achieve the color shadow on the box (1st-Right&Left,2nd-Top&Bottom,3rd-Shadow Spread) */
+}
+.y2020 h2{
+    text-align: center;
+    font-size: 350%;
+    font-weight: 300px;
+}
+.y2020 p{
+    font-size: 10px;
+    letter-spacing: .5mm;
+    padding: 1rem 2% 1rem;
+}
+@keyframes slideleft {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.y2022{
+    height: 200px;
+    width: 50%;
+    position: relative;
+    left: 30px;
+    background: transparent;
+    border: 3px solid aqua;
+    padding: 1rem 5% 2rem;
+    border-radius: 5rem;
+    transition: all .5s ease;
+    animation-name: slideright;
+    animation-duration: 2s;
+}
+.y2022:hover{
+    border-color: aqua;
+    transform: translateY(-10px) scale(1.09);
+    box-shadow: 0 0 40px aqua; /*To achieve the color shadow on the box (1st-Right&Left,2nd-Top&Bottom,3rd-Shadow Spread) */
+}
+.y2022 h2{
+    text-align: center;
+    font-size: 350%;
+}
+.y2022 p{
+    font-size: 10px;
+    letter-spacing: .5mm;
+    padding: 1rem 0 1rem;   
+}
+@keyframes slideright{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.education2{
+    display: inline-flex;
+    padding: 2rem 2% 4rem; 
+}
+.y2024{
+    height: 200px;
+    width: 50%;
+    position: relative;
+    background: transparent;
+    border: 3px solid aqua;
+    padding: 1rem 5% 2rem;
+    border-radius: 5rem;
+    transition: all .5s ease;
+    animation-name: slidebottomleft;
+    animation-duration: 2s;
+}
+.y2024:hover{
+    border-color: aqua;
+    transform: translateY(-10px) scale(1.09);
+    box-shadow: 0 0 40px aqua; /*To achieve the color shadow on the box (1st-Right&Left,2nd-Top&Bottom,3rd-Shadow Spread) */
+}
+.y2024 h2{
+    text-align: center;
+    font-size: 350%;
+}
+.y2024 p{
+    font-size: 10px;
+    letter-spacing: .5mm;
+    padding: 1rem 0 1rem;   
+}
+@keyframes slidebottomleft{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.y2026{
+    height: 200px;
+    width: 50%;
+    position: relative;
+    left: 30px;
+    background: transparent;
+    border: 3px solid aqua;
+    padding: 1rem 5% 2rem;
+    border-radius: 5rem;
+    transition: all .5s ease;
+    animation-name: slidebottomright;
+    animation-duration: 2s;
+}
+.y2026:hover{
+    border-color: aqua;
+    transform: translateY(-10px) scale(1.09);
+    box-shadow: 0 0 40px aqua; /*To achieve the color shadow on the box (1st-Right&Left,2nd-Top&Bottom,3rd-Shadow Spread) */
+}
+.y2026 h2{
+    text-align: center;
+    font-size: 350%;
+}
+.y2026 p{
+    font-size: 10px;
+    letter-spacing: .5mm;
+    padding: 1rem 0 1rem;   
+}
+@keyframes slidebottomright{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.About{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+}
+.pg3 img{
+    width: 450px;
+    height: auto;
+    margin-top: 20rem;
+    border-radius: 50px;
+    position: relative;
+    transition: all .5s ease;
+    animation-name: imgpg3;
+    animation-duration: 2s;
+}
+@keyframes imgpg3 {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.pg3 img:hover{
+    transform: translateY(-13px)scale(1.09);
+    box-shadow: 0 0 40px aqua;
+}
+.Aboutme{
+    display: inline;
+    margin-left: 250px;
+    margin-top: 100px;
+    text-transform: uppercase;
+}
+.Aboutme h1{
+    font-size: 50px;
+    transition: .5s ease;
+    animation-name: abouth1;
+    animation-duration: 2s;
+}
+@keyframes abouth1 {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.Aboutme h1:hover{
+    transform: scale(1.09);
+}
+.Aboutme h1 span{
+    color: aqua;
+}
+.Aboutme h2{
+    font-size: 30px;
+    font-weight: 500px;
+    transition: .5s ease;
+    animation-name: abouth2;
+    animation-duration: 2s;
+}
+@keyframes abouth2 {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.Aboutme h2 span{
+    color: aqua;
+}
+.Aboutme p{
+    padding: 4rem 0 4rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: grey;
+    transition: .5s ease;
+    animation-name: aboutp;
+    animation-duration: 2s;
+}
+@keyframes aboutp {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*.container{
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: black;
+    display: flex;
+    padding-top: 40rem;
+    justify-content: center;
+    align-items: center;
+}
+.container form{
+    width: 670px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    background: rgb(149, 148, 148);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+.container form h1{
+    color: aqua;
+    font-weight: 700px;
+    line-height: 2;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+.container form input{
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid white;
+    color: white;
+}
+.container form ::placeholder{
+    color: white;
+}
+.container form #lastname,
+.container form #mobile{
+    margin-left: 20px;
+}
+.container form h4{
+    color: white;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.container form textarea{
+    background: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
+    padding: 10px;
+    min-height: 90px;
+    max-height: 90px;
+    min-width: 620px;
+    max-width: 620px;
+}
+.container form #button{
+    background: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    color: black;
+    width: 200px;
+    height: 60px;
+    transition: .3s;
+}
+.container form #button:hover{
+    background: black;
+    color: white;
+    transition: .5s ease-in-out;
+}
+*/
+.container1{
+    background-color: black;
+    padding-top: 8rem;
+    height: 100%;
+    width: 100%;
+}
+.container1 h2{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 3rem;
+    position: relative;
+}
+.container1 h2 span{
+    color: aqua;
+}
+.container1 form{
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    text-align: center;
+}
+.container1 form .contact1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.container1 form .contact1 input, .container1 form textarea{
+    padding: 3rem;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    border: 2px solid aqua;
+    border-radius: 2rem;
+    margin: 2rem 0;
+}
+/* .contact2 input{
+    padding: 2rem;
+    display: flex;
+    margin-top: 3rem;
+    font-size: 15px;
+    background-color: black;
+    color: gray;
+    border: 2px solid aqua;
+    border-radius: 1.5rem;
+} */
+
+
+
+
+
+
+
+
+
+.submit-btn {
+    background-color: black; /* Green background */
+    border: none;              /* Remove border */
+    color: white;              /* White text */
+    padding: 15px 32px;         /* Some padding */
+    text-align: center;         /* Center text */
+    text-decoration: none;      /* Remove underline */
+    display: inline-block;      /* Inline-block */
+    font-size: 16px;            /* Font size */
+    margin: 4px 2px;            /* Margin */
+    cursor: pointer;            /* Pointer cursor */
+    border-radius: 12px; 
+    border: 2px solid aqua;    /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.submit-btn:hover {
+    background-color: aqua; /* Darker green on hover */
+}
